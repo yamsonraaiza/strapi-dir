@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmarks",
+  "info": {
+    "singularName": "bookmark",
+    "pluralName": "bookmarks",
+    "displayName": "bookmark",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "yield": {
+      "type": "integer"
+    },
+    "totalTime": {
+      "type": "decimal"
+    },
+    "ingredientLines": {
+      "type": "json"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "bookmarks"
+    }
+  }
+}
